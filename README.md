@@ -4,7 +4,7 @@ This repository benchmarks various ways of retrieving data from a JSON object us
 These JSON Selectors are currently evaluated in NodeJS, but should be applicable in the browser as well.
 
 ### What is a JSON Selector?
-I see a JSON selector as a string (e.g. `foo.bar[].value`) that can be applied to a Javascript object / JSON file (e.g. `{ foo: { bar: [{ value: 1, value 2 }] } }`) such that the result is a subset of the latter based on a filter using the former. 
+I see a JSON selector as a string (e.g. `foo.bar[].value`) that can be applied to a Javascript object / JSON file (e.g. `{ foo: { bar: [{ value: 1, value 2 }] } }`) such that the result (e.g. `[1, 2]`) is a subset of the latter based on a filter using the former. 
 
 JSON selectors make it easier to query one or more JSON files when the content isn't always fully know upfront, or when the accessors or filters are loaded in dynamically.
 
