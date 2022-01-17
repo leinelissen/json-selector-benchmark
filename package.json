@@ -1,0 +1,25 @@
+{
+  "name": "json-selector-benchmark",
+  "version": "1.0.0",
+  "description": "A benchmark for various JSON selector libaries available on NPM",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lei Nelissen",
+  "license": "MIT",
+  "dependencies": {
+    "@gizt/selector": "^1.0.9",
+    "@metrichor/jmespath": "^0.3.1",
+    "benny": "^3.7.1",
+    "jmespath": "^0.15.0",
+    "jsonpath": "^1.1.1",
+    "jsonpath-wasm": "^0.2.6",
+    "lodash": "^4.17.21",
+    "node-jq": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/jmespath": "^0.15.0"
+  }
+}

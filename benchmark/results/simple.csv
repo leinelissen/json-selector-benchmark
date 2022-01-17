@@ -1,0 +1,9 @@
+"name","ops","margin","percentSlower"
+"_.get",38279550,0.27,36.45
+"@gizt/selector",6272716,0.53,89.59
+"jsonpath",384142,0.12,99.36
+"jsonpath-wasm",304032,0.81,99.5
+"jsonpath-wasm-compiled",396460,0.93,99.34
+"jmespath",3094390,0.29,94.86
+"@metrichor/jmespath",10661210,0.67,82.3
+"@metrichor/jmespath-compiled",60234128,1.06,0
