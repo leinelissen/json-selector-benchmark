@@ -1,5 +1,12 @@
-# JSON Selector Benchmark
+# JSON Selector Benchmark 🚀
 This repository benchmarks various ways of retrieving data from a JSON object using a string-based JSON selector. It benchmarks the libraries against a couple of test suites, each emphasizing simpler or more complex cases of usage. In cases where selectors can be pre-compiled, they are included as a seperate suite case, affixed with `-compiled`.
+
+These JSON Selectors are currently evaluated in NodeJS, but should be applicable in the browser as well.
+
+### What is a JSON Selector?
+I see a JSON selector as a string (e.g. `foo.bar[].value`) that can be applied to a Javascript object / JSON file (e.g. `{ foo: { bar: [{ value: 1, value 2 }] } }`) such that the result is a subset of the latter based on a filter using the former. 
+
+JSON selectors make it easier to query one or more JSON files when the content isn't always fully know upfront, or when the accessors or filters are loaded in dynamically.
 
 ## Compared Libraries
 The following libraries are compared against eachother. 
@@ -14,7 +21,7 @@ NOTE: Not all libraries have same featureset. Some libraries are advantaged in o
 * [node-jq](https://github.com/sanack/node-jq) (currently disabled as it performs horrendously and breaks the suites)
 
 ## Results
-*All suites are run against a 2021 Macbook Pro (M1 Max, 16GB RAM)*
+*All suites are run against a 2021 Macbook Pro (M1 Max, 16GB RAM, NodeJS v16.13.1)*
 
 * [simple](./benchmark/results/simple.chart.html)
 ```
@@ -116,7 +123,7 @@ Finished 7 cases!
 ```
 
 ## Contributions
-Any contributions are warmly welcomed. Please submit a PR request and I will take a look at merging it.
+This benchmark is far from complete. Any contributions are warmly welcomed. We particularly look forward to either missing libraries or more diverse benchmark suites. Please submit a PR request and I will take a look at merging it.
 
 ## Credits
 &copy; Lei Nelissen 2021
