@@ -19,6 +19,7 @@ NOTE: Not all libraries have same featureset. Some libraries are advantaged in o
 * [jmespath](https://github.com/jmespath/jmespath.js)
 * [@metrichor/jmespath](https://github.com/nanoporetech/jmespath-ts)
 * [node-jq](https://github.com/sanack/node-jq) (currently disabled as it performs horrendously and breaks the suites)
+* [object-scan](https://github.com/blackflux/object-scan)
 
 ## Results
 *All suites are run against a 2021 Macbook Pro (M1 Max, 16GB RAM, NodeJS v16.13.1)*
