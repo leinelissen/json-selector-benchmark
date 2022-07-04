@@ -29,32 +29,35 @@ Running "simple" suite...
 Progress: 100%
 
   _.get:
-    38 279 550 ops/s, ±0.27%   | 36.45% slower
+    35 170 487 ops/s, ±0.14%   | 39.77% slower
 
   @gizt/selector:
-    6 272 716 ops/s, ±0.53%    | 89.59% slower
+    6 341 344 ops/s, ±0.41%    | 89.14% slower
 
   jsonpath:
-    384 142 ops/s, ±0.12%      | 99.36% slower
+    364 589 ops/s, ±0.42%      | 99.38% slower
 
   jsonpath-wasm:
-    304 032 ops/s, ±0.81%      | slowest, 99.5% slower
+    282 525 ops/s, ±1.79%      | 99.52% slower
 
   jsonpath-wasm-compiled:
-    396 460 ops/s, ±0.93%      | 99.34% slower
+    366 762 ops/s, ±1.86%      | 99.37% slower
 
   jmespath:
-    3 094 390 ops/s, ±0.29%    | 94.86% slower
+    2 903 565 ops/s, ±1.71%    | 95.03% slower
 
   @metrichor/jmespath:
-    10 661 210 ops/s, ±0.67%   | 82.3% slower
+    10 371 922 ops/s, ±0.41%   | 82.24% slower
 
   @metrichor/jmespath-compiled:
-    60 234 128 ops/s, ±1.06%   | fastest
+    58 398 083 ops/s, ±0.63%   | fastest
 
-Finished 8 cases!
+  object-scan:
+    281 257 ops/s, ±1.76%      | slowest, 99.52% slower
+
+Finished 9 cases!
   Fastest: @metrichor/jmespath-compiled
-  Slowest: jsonpath-wasm
+  Slowest: object-scan
 ```
 
 * [double-nested-first](./benchmark/results/double-nested-first.chart.html)
@@ -63,30 +66,33 @@ Running "double-nested-first" suite...
 Progress: 100%
 
   _.get:
-    6 772 256 ops/s, ±0.26%   | fastest
+    5 788 891 ops/s, ±0.42%   | fastest
 
   @gizt/selector:
-    753 729 ops/s, ±0.17%     | 88.87% slower
+    783 089 ops/s, ±0.45%     | 86.47% slower
 
   jsonpath:
-    78 219 ops/s, ±0.58%      | 98.85% slower
+    71 759 ops/s, ±0.41%      | 98.76% slower
 
   jsonpath-wasm:
-    23 465 ops/s, ±0.97%      | 99.65% slower
+    24 138 ops/s, ±1.06%      | 99.58% slower
 
   jsonpath-wasm-compiled:
-    15 506 ops/s, ±4.01%      | slowest, 99.77% slower
+    13 378 ops/s, ±6.51%      | slowest, 99.77% slower
 
   jmespath:
-    990 566 ops/s, ±0.21%     | 85.37% slower
+    981 244 ops/s, ±0.52%     | 83.05% slower
 
   @metrichor/jmespath:
-    1 303 746 ops/s, ±0.13%   | 80.75% slower
+    1 281 678 ops/s, ±0.46%   | 77.86% slower
 
   @metrichor/jmespath-compiled:
-    1 623 525 ops/s, ±0.36%   | 76.03% slower
+    1 573 679 ops/s, ±0.71%   | 72.82% slower
 
-Finished 8 cases!
+  object-scan:
+    215 537 ops/s, ±0.95%     | 96.28% slower
+
+Finished 9 cases!
   Fastest: _.get
   Slowest: jsonpath-wasm-compiled
 ```
@@ -97,27 +103,30 @@ Running "double-nested-all" suite...
 Progress: 100%
 
   @gizt/selector:
-    499 494 ops/s, ±0.42%     | 68.38% slower
+    500 134 ops/s, ±0.52%     | 68.56% slower
 
   jsonpath:
-    51 699 ops/s, ±0.33%      | 96.73% slower
+    49 929 ops/s, ±0.58%      | 96.86% slower
 
   jsonpath-wasm:
-    14 978 ops/s, ±1.62%      | slowest, 99.05% slower
+    15 520 ops/s, ±1.78%      | slowest, 99.02% slower
 
   jsonpath-wasm-compiled:
-    17 518 ops/s, ±1.13%      | 98.89% slower
+    19 282 ops/s, ±1.32%      | 98.79% slower
 
   jmespath:
-    685 479 ops/s, ±0.36%     | 56.61% slower
+    702 235 ops/s, ±0.74%     | 55.86% slower
 
   @metrichor/jmespath:
-    857 740 ops/s, ±0.23%     | 45.7% slower
+    837 498 ops/s, ±1.69%     | 47.35% slower
 
   @metrichor/jmespath-compiled:
-    1 579 693 ops/s, ±0.44%   | fastest
+    1 590 786 ops/s, ±0.65%   | fastest
 
-Finished 7 cases!
+  object-scan:
+    260 616 ops/s, ±0.92%     | 83.62% slower
+
+Finished 8 cases!
   Fastest: @metrichor/jmespath-compiled
   Slowest: jsonpath-wasm
 ```
@@ -126,4 +135,4 @@ Finished 7 cases!
 This benchmark is far from complete. Any contributions are warmly welcomed. We particularly look forward to either missing libraries or more diverse benchmark suites. Please submit a PR request and I will take a look at merging it.
 
 ## Credits
-&copy; Lei Nelissen 2021
+&copy; Lei Nelissen 2022

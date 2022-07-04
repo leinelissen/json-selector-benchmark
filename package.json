@@ -1,6 +1,6 @@
 {
   "name": "json-selector-benchmark",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A benchmark for various JSON selector libaries available on NPM",
   "main": "src/index.js",
   "scripts": {
@@ -16,10 +16,12 @@
     "jmespath": "^0.15.0",
     "jsonpath": "^1.1.1",
     "jsonpath-wasm": "^0.2.6",
-    "lodash": "^4.17.21",
-    "node-jq": "^2.1.0"
+    "lodash-es": "^4.17.21",
+    "node-jq": "^2.1.0",
+    "object-scan": "^18.3.4"
   },
   "devDependencies": {
     "@types/jmespath": "^0.15.0"
-  }
+  },
+  "type": "module"
 }

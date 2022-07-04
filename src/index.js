@@ -1,21 +1,24 @@
-const b = require('benny');
+import b from 'benny';
 
 /**
  * Import libraries
  */
 
-const lodashGet = require('lodash/get');
-const jsonPath = require('jsonpath');
-const jsonPathWasm = require('jsonpath-wasm');
-const gizt = require('@gizt/selector');
-const jq = require('node-jq');
-const jmesPath = require('jmespath');
-const jmesPathTs = require('@metrichor/jmespath');
+import { get as lodashGet } from 'lodash-es';
+import jsonPath from 'jsonpath';
+import jsonPathWasm from 'jsonpath-wasm';
+import gizt from '@gizt/selector';
+import jq from 'node-jq';
+import jmesPath from 'jmespath';
+import jmesPathTs from '@metrichor/jmespath';
+import objectScan from 'object-scan';
 
 /**
  * Import example JSON
  */
 
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 const simple = require('./data/simple.json');
 const doubleNested = require('./data/double-nested.json');
 
@@ -26,6 +29,8 @@ const doubleNested = require('./data/double-nested.json');
 // @mtrichor/jmespath
 const jmesTsSimple = jmesPathTs.compile('foo');
 const jmesTsDoubleNested = jmesPathTs.compile('relationships_followers[].string_list_data[].value');
+
+//
 
 /**
  * Define rouns and library implementations
@@ -45,6 +50,7 @@ const suites = [
             'jmespath': (data) => jmesPath.search(data, 'foo'),
             '@metrichor/jmespath': (data) => jmesPathTs.search(data, 'foo'),
             '@metrichor/jmespath-compiled': (data) => jmesPathTs.TreeInterpreter.search(jmesTsSimple, data),
+            'object-scan': objectScan(['foo']),
         },
     },
     {
@@ -60,6 +66,7 @@ const suites = [
             'jmespath': (data) => jmesPath.search(data, 'relationships_followers[0].string_list_data[0].value'),
             '@metrichor/jmespath': (data) => jmesPathTs.search(data, 'relationships_followers[0].string_list_data[0].value'),
             '@metrichor/jmespath-compiled': (data) => jmesPathTs.TreeInterpreter.search(jmesTsDoubleNested, data),
+            'object-scan': objectScan(['relationships_followers[0].string_list_data[0].value'])
         }
     },
     {
@@ -76,6 +83,7 @@ const suites = [
             'jmespath': (data) => jmesPath.search(data, 'relationships_followers[].string_list_data[].value'),
             '@metrichor/jmespath': (data) => jmesPathTs.search(data, 'relationships_followers[].string_list_data[].value'),
             '@metrichor/jmespath-compiled': (data) => jmesPathTs.TreeInterpreter.search(jmesTsDoubleNested, data),
+            'object-scan': objectScan(['relationships_followers.*.string_list_data.*.value']),
         }
     },
 ]

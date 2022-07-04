@@ -1,8 +1,9 @@
 "name","ops","margin","percentSlower"
-"@gizt/selector",499494,0.42,68.38
-"jsonpath",51699,0.33,96.73
-"jsonpath-wasm",14978,1.62,99.05
-"jsonpath-wasm-compiled",17518,1.13,98.89
-"jmespath",685479,0.36,56.61
-"@metrichor/jmespath",857740,0.23,45.7
-"@metrichor/jmespath-compiled",1579693,0.44,0
+"@gizt/selector",500134,0.52,68.56
+"jsonpath",49929,0.58,96.86
+"jsonpath-wasm",15520,1.78,99.02
+"jsonpath-wasm-compiled",19282,1.32,98.79
+"jmespath",702235,0.74,55.86
+"@metrichor/jmespath",837498,1.69,47.35
+"@metrichor/jmespath-compiled",1590786,0.65,0
+"object-scan",260616,0.92,83.62
